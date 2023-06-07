@@ -1,6 +1,6 @@
 <script lang="ts">
     import { link,navigate} from "svelte-routing";
-    import { addPlayer,getAllData } from "../functions/functions"; 
+    import { addPlayer,getAllData } from "../functions"; 
 
     let name : string = null
     let surname : string = null
@@ -23,17 +23,33 @@
 </script>
 
 
-<a class="link add-button" href="/" use:link>back to main page</a>
-<td><input type="text" bind:value={name} placeholder="name"></td>
-<td><input type="text" bind:value={surname} placeholder="surname"></td>
-<td><input type="number" bind:value={age} placeholder="age"></td>
-<td><input type="text" bind:value={city} placeholder="city"></td>
-<td><button on:click={handleSubmitClick} class="button submit-button">submit</button></td>
+<div class="column">
+  <a class="link add-button" href="/" use:link>back to main page</a>
+  <td><input type="text" bind:value={name} placeholder="name"></td>
+  <td><input type="text" bind:value={surname} placeholder="surname"></td>
+  <td><input type="number" bind:value={age} placeholder="age"></td>
+  <td><input type="text" bind:value={city} placeholder="city"></td>
+  <td><button on:click={handleSubmitClick} class="button submit-button">submit</button></td>
+</div>
+
+
 
 
 <style>
+  .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+  }
   .link {
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+
+    width: 250px;
+    margin: auto 0;
   padding: 6px 10px;
   border-radius: 4px;
   border: 1px solid blue;

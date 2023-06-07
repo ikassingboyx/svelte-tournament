@@ -4,13 +4,14 @@ import { Firestore, getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBAda2U0zleV4Hv9q03Qf8nifqDphzTrP0",
-  authDomain: "svelte-tournament-app.firebaseapp.com",
-  projectId: "svelte-tournament-app",
-  storageBucket: "svelte-tournament-app.appspot.com",
-  messagingSenderId: "222895190748",
-  appId: "1:222895190748:web:67b08905c07a9185c5ba19"
+  apiKey: "AIzaSyAEzIqluyO4DeZ0yJ-XiojdwrY_f-RVihk",
+  authDomain: "svelte-tournament-app-ca7fb.firebaseapp.com",
+  projectId: "svelte-tournament-app-ca7fb",
+  storageBucket: "svelte-tournament-app-ca7fb.appspot.com",
+  messagingSenderId: "198534660442",
+  appId: "1:198534660442:web:bbec092af432a538bcb363"
 };
+
 
 // Initialize Firebase
 const app : FirebaseApp = initializeApp(firebaseConfig);

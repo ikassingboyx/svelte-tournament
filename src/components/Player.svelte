@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { PlayerType } from "../static/types";
-    import { deletePlayer,changePlayersEditingStatus,getAllData } from "../functions/functions";
+    import { deletePlayer,changePlayersEditingStatus,getAllData } from "../functions";
     export let player : PlayerType;
 
     const handleEditClick = () =>{

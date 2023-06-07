@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { createTournament,changeTournamentRound,getPlayerById, getTournament } from "../functions/functions";
+  import { createTournament,changeTournamentRound,getPlayerById, getTournament } from "../functions";
   import { Tournament } from "../static/store";
   import { Link } from "svelte-routing";
   import { TournamentStatus } from "../static/enums";
@@ -28,7 +28,7 @@
   });
 
   const startTournament = async () =>{
-    let data = prompt("Podaj nazwę turnieju: ")
+    let data = prompt("Podaj nazwę: ")
     if(!data) return;
     isStarted = true;
     isLoading = true;

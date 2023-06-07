@@ -2,10 +2,10 @@
   import { onMount } from "svelte";
   import { link, navigate,Link } from "svelte-routing";
   import { Players } from "../static/store";
-  import { getAllData,searchPhrase } from "../functions/functions";
+  import { getAllData,searchPhrase } from "../functions";
 
   import Player from "./Player.svelte";
-  import EditingPlayer from "./EditingPlayer.svelte";
+  import EditingPlayer from "./Edit.svelte";
     import type { PlayerType } from "../static/types";
   let isLoading: boolean = true;
   let searchTerm : string = ""
@@ -29,9 +29,11 @@
   }
 
 </script>
+<div class="center">
+  <a class="link add-link" href="/add" use:link>add new player</a>
+  <a class="link" href="/tournament" use:link>see tournament</a>
+</div>
 
-<a class="link add-link" href="/add" use:link>add new player</a>
-<a class="link" href="/tournament" use:link>see tournament</a>
 
 {#if isLoading}
   <p>Loading data...</p>
@@ -76,14 +78,21 @@
   </table>
 {/if}
 <style>
+  .center{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
 .link {
   margin-right: 10px;
   padding: 6px 10px;
   border-radius: 4px;
+  width: 220px;
   border: 1px solid blue;
   font-size: 14px;
   color: blue;
   text-decoration: none;
+  text-align: center;
 }
 
 .add-link {

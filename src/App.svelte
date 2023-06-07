@@ -1,8 +1,8 @@
 <script lang="ts">
     import { Router,Route } from "svelte-routing";
-    import PlayersView from "./components/PlayersView.svelte";
-    import TournamentHallView from "./components/TournamentHallView.svelte";
-    import AddPlayerView from "./components/AddPlayerView.svelte";
+    import PlayersView from "./components/View.svelte";
+    import TournamentHallView from "./components/TourViewTwo.svelte";
+    import AddPlayerView from "./components/Add.svelte";
     import { onMount } from "svelte";
     import "./static/styles/style.scss"
     onMount(()=>{

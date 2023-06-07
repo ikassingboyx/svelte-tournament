@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { PlayerType } from "../static/types";
     export let player : PlayerType;
-    import { changePlayersEditingStatus, updatePlayer,getAllData,getPlayer } from "../functions/functions";
+    import { changePlayersEditingStatus, updatePlayer,getAllData,getPlayer } from "../functions";
 
     let name : string = player.name
     let surname : string = player.surname

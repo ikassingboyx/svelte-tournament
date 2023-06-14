@@ -1,9 +1,11 @@
-import type { PlayerToAddType, PlayerType } from "./static/types"
-import { Players, Tournament } from "./static/store"
+import type { PlayerToAddType, PlayerType, TournamentPair, TournamentType } from "./static/types"
+import { Players, Tournament, TournamentPairs } from "./static/store"
 import { db } from "./static/firebase"
 import { deleteDoc,doc,setDoc,getDoc } from "firebase/firestore"
 import { PlayerStatus } from "./static/enums"
 import { get } from "svelte/store"
+import { TournamentStatus } from "./static/enums";
+import {isEqual} from 'lodash/isEqual';
 import Player from "./components/Player.svelte"
 
 export const getPlayer = async(id: string) =>{
@@ -83,9 +85,7 @@ export const getAllData = async ()=>{
     })
 }
     
-import { TournamentStatus } from "./static/enums";
 
-import {isEqual} from 'lodash/isEqual';
 
 let playersWaitingForFirstGame : PlayerType[] = []
 export const createTournament = async (name : string, winPrize : number ) =>{
